@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/*
+#################################################
+This is part of the UI framework being developed.
+#################################################
+*/
+//---------
+$gray0: #F6F8FF;
+$primary: #636983;
+$transition: all .2s;
+
+
+
+.title {
+  text-align:center;
+  padding: 40px 0;
+  font-size: 40px;
+  font-weight: 300;
+  color: $primary;
+}
+
+.wrapper {
+  background-color: $gray0;
+  width: 100%;
+  min-height: 100vh;
+  
+  .line {
+    width: 50%;
+    margin: 50px auto 0 auto;
+    height: 1px;
+    background-color: #c3d2e3;
+  }
+}
+
+.table {
+  width: 60%;
+  margin: 0 auto;
+  
+  table {
+    width: 100%;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 25px 20px -25px rgb(0 0 0 / 10%);
+    
+    thead {
+      background-color: #f4f7f8;
+      border-spacing: 0;
+      td {
+        font-size: 18px;
+        font-weight: 600;
+        color: #666;
+        padding: 10px;
+        
+        &:nth-child(1){
+          border-radius: 10px 0 0 0;
+        }
+        &:nth-last-child(1){
+          border-radius: 0 10px 0 0;
+        }
+      }
+    }
+    tbody{
+      tr {
+        transition: $transition;
+        
+        td {
+          padding: 10px;
+          color: #666;
+        }
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px -15px rgb(0 0 0 / 4%);
+          background-color: #ededed1c;
+        }
+      }
+    }
+    tfoot {
+      tr td {
+        padding: 3px 10px;
+        background-color: #f4f7f8;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  position: relative;
+  right: 10px;
+  justify-content: flex-end;
+  gap: 5px;
+  
+  .page {
+    width: 10px;
+    height: 30px;
+    flex-basis: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 6px;
+    background: #f0f3f4;
+    border-radius: 7px;
+    color: $primary;
+    cursor: pointer;
+    
+    &.active {
+      
+    }
+    
+    &:hover {
+      
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .table {
+    width: 90%;
+  }
+}

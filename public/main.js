@@ -1,0 +1,1 @@
+let searchInput = new AmazonAutocomplete('#search-input');
